@@ -1,0 +1,16 @@
+<div class="container" *ngIf="userService.show">
+
+<form class="form-inline" (ngSubmit)="handleUser()">
+    <label for="userName">Enter email:</label>
+    <input 
+    [(ngModel)]="userName"
+    type="text" 
+    class="form-control-plaintext" 
+    id="userName"
+    name = "userName" />
+
+<button type="submit" class="btn sm ml-3">Load Wallet</button>
+  <button class="btn sm" (click)="handleSave()">Save Wallet</button>
+</form>
+
+</div>

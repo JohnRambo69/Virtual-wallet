@@ -1,0 +1,16 @@
+.subnav .nav li {
+  width: 300px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.subnav .nav li:hover {
+  cursor: pointer;
+}
+
+:host .nav-item.increase {
+  color: #558b2f;
+}
+:host .nav-item.decrease {
+  color: #c62828;
+}

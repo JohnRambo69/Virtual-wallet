@@ -1,0 +1,57 @@
+<app-alert></app-alert>
+<div class="main-container">
+
+<app-header [user]="user"></app-header>
+
+<!-- <app-load></app-load> -->
+
+<div class="container" *ngIf="userService.show">
+
+  <div class="container row">
+
+    <label for="userName" class="mt-2">Enter email:</label>
+    <input 
+    [(ngModel)]="userName"
+    type="text" 
+    class="form-control-plaintext mt-2" 
+    id="userName"
+    name = "userName" />
+
+<button type="submit" class="btn sm ml-3" (click)="handleUser()">Load Wallet</button>
+    <button class="btn sm" (click)="handleSave()">Save Wallet</button>
+    <button class="btn sm" (click)="handlelogOut()" *ngIf="user">Log Out</button>
+  </div>
+  </div>
+
+
+
+  <nav class="subnav">
+    <app-ticker [stocks]="stocks"></app-ticker>
+  </nav>
+  <div class="content-container">
+    <div class="content-area">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title">Your wallet</h3>
+              <div class="card-text">
+                <app-investments></app-investments>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-block">
+              <h3 class="card-title">All companies</h3>
+              <p class="card-text">
+                <app-stocks [stocks]="stocks"></app-stocks>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

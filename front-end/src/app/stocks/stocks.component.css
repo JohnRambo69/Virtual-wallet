@@ -1,0 +1,13 @@
+.btn-cell {
+  padding: 5px;
+}
+:host .btn {
+  margin-right: 0;
+}
+
+:host .cell.increase {
+  color: #558b2f;
+}
+:host .cell.decrease {
+  color: #c62828;
+}
